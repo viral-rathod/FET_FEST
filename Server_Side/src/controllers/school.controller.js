@@ -1,19 +1,18 @@
 const SchoolModel = require("../model/school.model");
 
-exports.create = async (req, res) => {
+exports.findAll = async (req, res) => {
   try {
-    const param = req.body;
-    const school = new SchoolModel(param);
-    await school.save();
+    const _user = await SchoolModel.find();
     res.json({
       status: true,
-      message: "Success",
-      data: null
+      message: "successful!",
+      data: _user
     });
   } catch (error) {
     res.json({
       status: false,
-      message: error
+      message: error,
+      data: null
     });
   }
 };

@@ -2,6 +2,7 @@
 const dbConfig = require("./config/database.config");
 const schoolRoutes = require("./routes/school.routes");
 const authRoutes = require("./routes/auth.routes");
+const studentRoutes = require("./routes/student.route");
 
 // Server connection imports
 const express = require("express");
@@ -24,6 +25,7 @@ app.use(body_parser.json());
 // Routes
 app.use("/api/school", schoolRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/student", studentRoutes);
 
 // Listen application on some port
 const port = 8085;
