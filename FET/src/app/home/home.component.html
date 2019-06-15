@@ -1,3 +1,103 @@
-<p>
-  home works!
-</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">BeingCitizen</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Donate</a>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-success sign-in">Sign In</button>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-success sign-up">Register</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
+  [showNavigationIndicators]="showNavigationIndicators">
+  <ng-template ngbSlide>
+    <img [src]="images[0]" alt="first slide">
+    <div class="carousel-caption carousel-caption1">
+      <h3>Education is a gift for life</h3>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[1]" alt="second slide">
+    <div class="carousel-caption carousel-caption2">
+      <h3>Every child is special</h3>
+      <p>Let us ensure that every child get their right for education.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[2]" alt="third slide">
+    <div class="carousel-caption carousel-caption3">
+      <h3>Donate what whatever you can</h3>
+      <p>Even small pencial can bring smile on their face</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="intro container">
+  <h1>Being Citizen</h1>
+  <hr>
+  <div class="into-inner row">
+    <div class="inner-img col-lg-6">
+      <img src="assets/images/carousel-4.jpg">
+    </div>
+    <div class="inner-text col-lg-6">
+      <p>
+        Education is a gift for life. This platform will help children to unlock their potential and realise their
+        dreams.
+        Every child is extraordinary and can scale great heights if provided with the right learning opportunities. With
+        help of this platform we connect those child with donar.
+
+        With complete transparency, every school can register on this platform and only school can add the list of child
+        who
+        needs actual help. Hence donor will have access to all the child who requires actual need.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="donate container">
+  <h1>
+    What you can donate
+  </h1>
+  <hr>
+  <div class="donate-inner row">
+    <div class="item col-lg-3">
+      <div class="icon">
+          <i class="fa fa-book" aria-hidden="true"></i>
+      </div>
+      <p>Books</p>
+    </div>
+    <div class="item col-lg-3">
+      <div class="icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+      </div>
+      <p>Stationary</p>
+    </div>
+    <div class="item col-lg-3">
+      <div class="icon">
+          <i class="fa fa-user-md" aria-hidden="true"></i>
+      </div>
+      <p>Uniform</p>
+    </div>
+    <div class="item col-lg-3">
+      <div class="icon">
+          <i class="fa fa-money" aria-hidden="true"></i>
+      </div>
+      <p>Fees</p>
+    </div>
+  </div>
+</div>
