@@ -37,34 +37,10 @@
         <div class="card-body">
           <h4 class="card-title">{{ item.first_name + ' ' + item.last_name }}</h4>
           <p class="card-text">
-
+            <a class="btn btn-primary" (click)="openModal(item)">Donate</a>
           </p>
-          <a class="btn btn-primary" (click)="open(content, item)">Donate</a>
         </div>
       </div>
-      <!-- <div class="card col-lg-3">
-              <img class="card-img-top" src="assets/images/img_avatar1.png" alt="Card image" style="width:100%">
-              <div class="card-body">
-                <h4 class="card-title">Sachin Patel</h4>
-                <p class="card-text">Some example text some example text. Sachin is an architect and engineer</p>
-                <a class="btn btn-primary" (click)="open(content)">Donate</a>
-              </div>
-            </div> -->
     </div>
   </div>
 </div>
-
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Name of Student</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="assets/images/img_avater1.png">
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Pay</button>
-  </div>
-</ng-template>
