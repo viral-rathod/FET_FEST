@@ -54,6 +54,7 @@ export class SignupComponent implements OnInit {
           city: '',
           pin_code: ''
         }),
+        role: 'user',
         email: ['', Validators.required],
         password: ['', Validators.required],
         confirmPassword: ['', Validators.required]
