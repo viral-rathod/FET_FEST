@@ -1,19 +1,19 @@
 <div class="auth-form">
   <form [formGroup]="signupForm" (ngSubmit)="onSubmitForm()">
-      <h5>
-          Please Sign up by filling following details.
-        </h5>
+    <h5>
+      Please Sign up by filling following details.
+    </h5>
     <div class="form-group">
       <label for="school_name">
         School Name <span class="text-danger">*</span>
       </label>
-      <input type="school_name" formControlName="school_name" class="form-control" name="school_name" id="school_name"
-        placeholder="Enter Email / Username">
-      <em *ngIf="school_name.invalid && (school_name.dirty || school_name.touched)" class="error">
+      <input type="text" formControlName="school_name" class="form-control" id="school_name"
+        placeholder="Enter School Name">
+      <!-- <em *ngIf="school_name.invalid && (school_name.dirty || school_name.touched)" class="error">
         <span *ngIf="school_name.errors.required">
           {{validationMessage.required}}
         </span>
-      </em>
+      </em> -->
     </div>
 
     <div [formGroupName]="address" class="form-group ">
@@ -45,11 +45,11 @@
       </label>
       <input type="email" formControlName="email" class="form-control" name="email" id="email"
         placeholder="Enter Email / Username">
-      <em *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+      <!-- <em *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
         <span *ngIf="email.errors.required">
           {{validationMessage.required}}
         </span>
-      </em>
+      </em> -->
     </div>
 
     <div class="form-group ">
@@ -58,11 +58,11 @@
       </label>
       <input type="password" formControlName="password" class="form-control" name="password" id="password"
         placeholder="Enter Password">
-      <em *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+      <!-- <em *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
         <span *ngIf="password.errors.required">
           {{validationMessage.required}}
         </span>
-      </em>
+      </em> -->
     </div>
 
     <div class="form-group ">
@@ -71,13 +71,13 @@
       </label>
       <input type="password" formControlName="confirmPassword" class="form-control" name="confirmPassword"
         id="confirmPassword" placeholder="Enter Confirm Password">
-      <em *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="error">
+      <!-- <em *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="error">
         <span *ngIf="confirmPassword.errors.required">
           {{validationMessage.required}}
         </span>
-      </em>
+      </em> -->
     </div>
-    
+
     <div class="form-group">
       <div class="">
         <button class="btn btn-info btn-block" [disabled]="signupForm.invalid">
