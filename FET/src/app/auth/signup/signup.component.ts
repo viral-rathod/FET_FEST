@@ -27,6 +27,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmitForm() {
+    this._router.navigate(['auth/signin'])
     if (!this.signupForm.valid) {
       this.validateForm(this.signupForm);
     } else if (this.signupForm.valid) {
