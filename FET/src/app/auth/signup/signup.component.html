@@ -6,11 +6,11 @@
     </label>
     <input type="school_name" formControlName="school_name" class="form-control" name="school_name" id="school_name"
       placeholder="Enter Email / Username">
-    <em *ngIf="school_name.invalid && (school_name.dirty || school_name.touched)" class="error">
+    <!-- <em *ngIf="school_name.invalid && (school_name.dirty || school_name.touched)" class="error">
       <span *ngIf="school_name.errors.required">
         {{validationMessage.required}}
       </span>
-    </em>
+    </em> -->
   </div>
 
   <div [formGroupName]="address" class="form-group col-md-6">
@@ -43,11 +43,11 @@
     </label>
     <input type="email" formControlName="email" class="form-control" name="email" id="email"
       placeholder="Enter Email / Username">
-    <em *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+    <!-- <em *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
       <span *ngIf="email.errors.required">
         {{validationMessage.required}}
       </span>
-    </em>
+    </em> -->
   </div>
 
   <div class="form-group col-md-6">
@@ -56,11 +56,11 @@
     </label>
     <input type="password" formControlName="password" class="form-control" name="password" id="password"
       placeholder="Enter Password">
-    <em *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+    <!-- <em *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
       <span *ngIf="password.errors.required">
         {{validationMessage.required}}
       </span>
-    </em>
+    </em> -->
   </div>
 
   <div class="form-group col-md-6">
@@ -69,11 +69,11 @@
     </label>
     <input type="password" formControlName="confirmPassword" class="form-control" name="confirmPassword"
       id="confirmPassword" placeholder="Enter Confirm Password">
-    <em *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="error">
+    <!-- <em *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="error">
       <span *ngIf="confirmPassword.errors.required">
         {{validationMessage.required}}
       </span>
-    </em>
+    </em> -->
   </div>
 
   <div class="form-group">
