@@ -32,6 +32,7 @@ export class SchoolComponent implements OnInit {
       if (res.status) {
         this.schoolList = res.data;
         this._toasterService.success(AppConfig.messages.success.register);
+        console.log()
       } else {
         this._toasterService.error(res.message);
       }
