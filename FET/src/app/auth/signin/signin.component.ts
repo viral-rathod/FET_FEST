@@ -28,7 +28,6 @@ export class SigninComponent implements OnInit {
   }
 
   onSubmitForm() {
-    this._router.navigate(['admin/dashboard']);
     if (!this.signinForm.valid) {
       this.validateForm(this.signinForm);
     } else if (this.signinForm.valid) {
@@ -39,7 +38,6 @@ export class SigninComponent implements OnInit {
       this._dataService.post(req).subscribe((res: any) => {
         if (res.status) {
           this._toasterService.success(AppConfig.messages.success.register);
-          // this.resetForm();
           this._router.navigate(['admin/dashboard']);
         } else {
           this._toasterService.error(res.message);
