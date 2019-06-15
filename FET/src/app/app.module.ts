@@ -7,11 +7,13 @@ import { AppRoutingModule, AppRoutedComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
+import { AddDonateComponent } from './donate/add-donate/add-donate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppRoutedComponents
+    AppRoutedComponents,
+    AddDonateComponent
   ], 
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { SharedModule } from './shared/shared.module';
     NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddDonateComponent]
 })
 export class AppModule { }

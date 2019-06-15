@@ -4,6 +4,7 @@ import { AppConfig } from 'src/app/app.config';
 import { DataService } from 'src/app/shared/services/data.service';
 import { TosterService } from 'src/app/shared/services/toster.service';
 import { Router } from '@angular/router';
+import { AddDonateComponent } from './../donate/add-donate/add-donate.component';
 
 @Component({
   selector: 'app-donate',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class DonateComponent implements OnInit {
   closeResult: string;
-
+  item: any;
   studentList: Array<any> = [];
   constructor(
     private _dataService: DataService,
@@ -25,7 +26,14 @@ export class DonateComponent implements OnInit {
     this.getInitialData();
   }
 
+  openModal(item: any) {
+    this.item = item;
+    const modalRef = this.modalService.open(AddDonateComponent);
+    modalRef.componentInstance.student = this.item;
+  }
+
   open(content, item) {
+    this.item = item;
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {

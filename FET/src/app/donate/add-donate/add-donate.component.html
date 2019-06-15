@@ -1,0 +1,75 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Simple modal</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmitForm()">
+    <div class="form-group col-md-12">
+      <h5>Amenities</h5>
+      <div class="row" formGroupName="amenities">
+        <div formGroupName="books" class="amenities-item form-group col-md-12">
+          <h6 for="priceB">Books</h6>
+          <div class="item-inner row">
+            <input type="checkbox" formControlName="paid" name="paidB" id="paidB"> Paid
+            <input type="text" formControlName="price" class="form-control col-lg-5" name="priceB" id="priceB"
+              placeholder="Books Price">
+            <input type="text" formControlName="paid_by" class="form-control col-lg-5" name="paid_byB" id="paid_byB"
+              placeholder="Paid By">
+          </div>
+        </div>
+      </div>
+
+      <div class="row" formGroupName="amenities">
+        <div formGroupName="stationary" class="amenities-item form-group col-md-12">
+          <h6 for="priceB">Books</h6>
+          <div class="item-inner row">
+            <input type="checkbox" formControlName="paid" name="paidB" id="paidB"> Paid
+            <input type="text" formControlName="price" class="form-control col-lg-5" name="priceB" id="priceB"
+              placeholder="Books Price">
+            <input type="text" formControlName="paid_by" class="form-control col-lg-5" name="paid_byB" id="paid_byB"
+              placeholder="Paid By">
+          </div>
+        </div>
+      </div>
+
+      <div class="row" formGroupName="amenities">
+        <div formGroupName="fee" class="amenities-item form-group col-md-12">
+          <h6 for="priceB">Books</h6>
+          <div class="item-inner row">
+            <input type="checkbox" formControlName="paid" name="paidB" id="paidB"> Paid
+            <input type="text" formControlName="price" class="form-control col-lg-5" name="priceB" id="priceB"
+              placeholder="Books Price">
+            <input type="text" formControlName="paid_by" class="form-control col-lg-5" name="paid_byB" id="paid_byB"
+              placeholder="Paid By">
+          </div>
+        </div>
+      </div>
+
+      <div class="row" formGroupName="amenities">
+        <div formGroupName="uniform" class="amenities-item form-group col-md-12">
+          <h6 for="priceB">Books</h6>
+          <div class="item-inner row">
+            <input type="checkbox" formControlName="paid" name="paidB" id="paidB"> Paid
+            <input type="text" formControlName="price" class="form-control col-lg-5" name="priceB" id="priceB"
+              placeholder="Books Price">
+            <input type="text" formControlName="paid_by" class="form-control col-lg-5" name="paid_byB" id="paid_byB"
+              placeholder="Paid By">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-12">
+        <button class="btn btn-info btn-block">
+          Pay
+        </button>
+
+      </div>
+    </div>
+  </form>
+</div>
