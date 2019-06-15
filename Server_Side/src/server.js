@@ -1,5 +1,7 @@
 // Other imports
 const dbConfig = require("./config/database.config");
+const schoolRoutes = require("./routes/school.routes");
+const authRoutes = require("./routes/auth.routes");
 
 // Server connection imports
 const express = require("express");
@@ -19,9 +21,14 @@ app.use(body_parser.urlencoded({ extended: true }));
 // parse requests of content type - application/json
 app.use(body_parser.json());
 
+// Routes
+app.use("/api/school", schoolRoutes);
+app.use("/api/auth", authRoutes);
+
 // Listen application on some port
-app.listen(3000, err => {
-  if (!err) console.log("Server started on port 3000");
+const port = 8085;
+app.listen(port, err => {
+  if (!err) console.log("Server started on port " + port);
   else
     console.log(
       "Server couldn't be connected due to ",
