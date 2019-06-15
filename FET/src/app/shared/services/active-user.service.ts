@@ -38,7 +38,6 @@ export class ActiveUserService {
   }
 
   logout() {
-    localStorage.removeItem('currentUser')
+    localStorage.removeItem("currentUser");
   }
-
 }
