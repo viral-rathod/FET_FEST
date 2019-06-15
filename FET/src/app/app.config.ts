@@ -10,7 +10,7 @@ export const AppConfig = {
         student: {
             findAll: 'student/findAll',
             findById: 'student/findById',
-            add: 'student/add',
+            add: 'student/create',
             update: 'student/update',
             delete: 'student/delete',
             findByAmenities: 'student/findByAmenities'
