@@ -1,3 +1,135 @@
-<p>
-  signup works!
-</p>
+<div class="auth-form">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmitForm()">
+      <h5>
+          Please Sign up by filling following details.
+        </h5>
+    <div class="form-group">
+      <label for="school_name">
+        School Name <span class="text-danger">*</span>
+      </label>
+      <input type="school_name" formControlName="school_name" class="form-control" name="school_name" id="school_name"
+        placeholder="Enter Email / Username">
+      <em *ngIf="school_name.invalid && (school_name.dirty || school_name.touched)" class="error">
+        <span *ngIf="school_name.errors.required">
+          {{validationMessage.required}}
+        </span>
+      </em>
+    </div>
+
+    <div [formGroupName]="address" class="form-group ">
+      <label for="addressLine1">Address</label>
+      <input type="text" formControlName="addressLine1" class="form-control" name="addressLine1" id="addressLine1"
+        placeholder="Enter Address">
+    </div>
+    <div [formGroupName]="address" class="form-group ">
+      <label for="country">country</label>
+      <input type="text" formControlName="country" class="form-control" name="country" id="country"
+        placeholder="Enter country">
+    </div>
+    <div [formGroupName]="address" class="form-group ">
+      <label for="state">state</label>
+      <input type="text" formControlName="state" class="form-control" name="state" id="state" placeholder="Enter state">
+    </div>
+    <div [formGroupName]="address" class="form-group ">
+      <label for="city">Address</label>
+      <input type="text" formControlName="city" class="form-control" name="city" id="city" placeholder="Enter Address">
+    </div>
+    <div [formGroupName]="address" class="form-group ">
+      <label for="pin_code">Address</label>
+      <input type="text" formControlName="pin_code" class="form-control" name="pin_code" id="pin_code"
+        placeholder="Enter Pincode ">
+    </div>
+
+<<<<<<< HEAD
+    <div class="form-group ">
+      <label for="email">
+        Email <span class="text-danger">*</span>
+      </label>
+      <input type="email" formControlName="email" class="form-control" name="email" id="email"
+        placeholder="Enter Email / Username">
+      <em *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+        <span *ngIf="email.errors.required">
+          {{validationMessage.required}}
+        </span>
+      </em>
+    </div>
+
+    <div class="form-group ">
+      <label for="password">
+        Password <span class="text-danger">*</span>
+      </label>
+      <input type="password" formControlName="password" class="form-control" name="password" id="password"
+        placeholder="Enter Password">
+      <em *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+        <span *ngIf="password.errors.required">
+          {{validationMessage.required}}
+        </span>
+      </em>
+    </div>
+
+    <div class="form-group ">
+      <label for="confirmPassword">
+        Confirm Password <span class="text-danger">*</span>
+      </label>
+      <input type="password" formControlName="confirmPassword" class="form-control" name="confirmPassword"
+        id="confirmPassword" placeholder="Enter Confirm Password">
+      <em *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="error">
+        <span *ngIf="confirmPassword.errors.required">
+          {{validationMessage.required}}
+        </span>
+      </em>
+    </div>
+=======
+  <div class="form-group col-md-6">
+    <label for="email">
+      Email <span class="text-danger">*</span>
+    </label>
+    <input type="email" formControlName="email" class="form-control" name="email" id="email"
+      placeholder="Enter Email / Username">
+    <!-- <em *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+      <span *ngIf="email.errors.required">
+        {{validationMessage.required}}
+      </span>
+    </em> -->
+  </div>
+
+  <div class="form-group col-md-6">
+    <label for="password">
+      Password <span class="text-danger">*</span>
+    </label>
+    <input type="password" formControlName="password" class="form-control" name="password" id="password"
+      placeholder="Enter Password">
+    <!-- <em *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+      <span *ngIf="password.errors.required">
+        {{validationMessage.required}}
+      </span>
+    </em> -->
+  </div>
+
+  <div class="form-group col-md-6">
+    <label for="confirmPassword">
+      Confirm Password <span class="text-danger">*</span>
+    </label>
+    <input type="password" formControlName="confirmPassword" class="form-control" name="confirmPassword"
+      id="confirmPassword" placeholder="Enter Confirm Password">
+    <!-- <em *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="error">
+      <span *ngIf="confirmPassword.errors.required">
+        {{validationMessage.required}}
+      </span>
+    </em> -->
+  </div>
+>>>>>>> master
+
+    <div class="form-group">
+      <div class="">
+        <button class="btn btn-info btn-block" [disabled]="signupForm.invalid">
+          Register
+        </button>
+        <br>
+        if you have account already,
+        <a routerLink="/auth/signin" href="javascript:void(0)" class="text-primary">Signin</a> here
+      </div>
+    </div>
+
+  </form>
+</div>
