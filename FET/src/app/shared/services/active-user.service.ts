@@ -37,4 +37,8 @@ export class ActiveUserService {
     localStorage.clear();
   }
 
+  logout() {
+    localStorage.removeItem('currentUser')
+  }
+
 }
