@@ -12,29 +12,27 @@
     Student</button>
 </div>
 
-<hr>
 <div class="row">
   <div class="col-12">
-      <table class="table table-striped">
-        <thead>
+    <table class="table table-striped">
+      <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Country</th>
-          <th scope="col">Area</th>
-          <th scope="col">Population</th>
+          <th scope="col">Student Name</th>
+          <th scope="col">School Name</th>
+          <th scope="col">Email</th>
         </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let country of countries; index as i">
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of studentList; let i = index;">
           <th scope="row">{{ i + 1 }}</th>
           <td>
-            <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
-            {{ country.name }}
+            {{ item.first_name + ' ' + item.last_name }}
           </td>
-          <td>{{ country.area | number }}</td>
-          <td>{{ country.population | number }}</td>
+          <td>{{ item.school_name }}</td>
+          <td>{{ item.email }}</td>
         </tr>
-        </tbody>
-      </table>
+      </tbody>
+    </table>
   </div>
 </div>

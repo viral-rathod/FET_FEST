@@ -9,9 +9,11 @@ export const AppConfig = {
         },
         student: {
             findAll: 'student/findAll',
+            findById: 'student/findById',
             add: 'student/add',
             update: 'student/update',
-            delete: 'student/delete'
+            delete: 'student/delete',
+            findByAmenities: 'student/findByAmenities'
         }
     },
     messages: {
