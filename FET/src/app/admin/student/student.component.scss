@@ -1,0 +1,10 @@
+.std_btn{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    .add-std_btn{
+        margin-right: 75px;
+        background-color: #EB8888 !important;
+        border-color: #EB8888 !important;
+    }
+}
