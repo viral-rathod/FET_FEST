@@ -1,0 +1,18 @@
+.navbar{
+    padding: 10px 50px;
+
+    .navbar-brand{
+        font-weight: bold;
+        color: #EB8888;
+    }
+
+    .navbar-collapse{
+        justify-content: flex-end;
+    }
+    
+    .nav-item{
+        button {
+            margin: 0 10px;
+        }
+    }
+}
