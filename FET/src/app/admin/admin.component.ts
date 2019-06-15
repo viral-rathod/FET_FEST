@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActiveUserModel } from '../models/active-user.model';
+import { ActiveUserService } from '../shared/services/active-user.service';
 
 @Component({
   selector: 'app-admin',

@@ -21,7 +21,6 @@ export class ActiveUserService {
       const user = localStorage.getItem("currentUser");
       if (user !== null) {
         this.activeUserModel = JSON.parse(user);
-        this.token = this.activeUserModel.token;
       }
     }
   }
