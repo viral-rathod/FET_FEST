@@ -12,9 +12,27 @@
     Student</button>
 </div>
 
-<hr>
 <div class="row">
   <div class="col-12">
-
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Student Name</th>
+          <th scope="col">School Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of studentList; let i = index;">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            {{ item.first_name + ' ' + item.last_name }}
+          </td>
+          <td>{{ item.school_name }}</td>
+          <td>{{ item.email }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
