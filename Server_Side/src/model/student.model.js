@@ -15,7 +15,7 @@ const StudentSchema = new Schema({
     pin_code: { type: Number }
   },
   amenities: {
-    book: {
+    books: {
       paid: { type: Boolean },
       price: { type: Number },
       paid_by: { type: String },
