@@ -12,14 +12,14 @@ import { SharedModule } from './shared/shared.module';
   declarations: [
     AppComponent,
     AppRoutedComponents
-  ],
+  ], 
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    SharedModule,
-    AppRoutingModule,
+  ReactiveFormsModule,
+  HttpClientModule,
+  SharedModule,
+  AppRoutingModule,
     AppRoutingModule,
     NgbModule
   ],

@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SchoolComponent } from './school/school.component';
 import { StudentComponent } from './student/student.component';
 import { AddStudentComponent } from './student/add-student/add-student.component';
+import { EditStudentComponent } from './student/edit-student/edit-student.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,13 @@ const routes: Routes = [
             { path: "", component: DashboardComponent },
             { path: "dashboard", component: DashboardComponent },
             { path: "school", component: SchoolComponent },
-            { path: "student", component: StudentComponent },
+            {
+                path: "student", children: [
+                    { path: '', component: StudentComponent },
+                    { path: 'add-student', component: AddStudentComponent },
+                    { path: 'edit-student/:id', component: EditStudentComponent }
+                ]
+            },
         ]
     }
 ];
@@ -32,5 +39,6 @@ export const AdminRoutedComponents = [
     DashboardComponent,
     SchoolComponent,
     AddStudentComponent,
+    EditStudentComponent,
     StudentComponent
 ];
