@@ -3,6 +3,7 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 import { AppConfig } from 'src/app/app.config';
 import { DataService } from 'src/app/shared/services/data.service';
 import { TosterService } from 'src/app/shared/services/toster.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +17,8 @@ export class SignupComponent implements OnInit {
   constructor(
     private _formBuilder: FormBuilder,
     private _dataService: DataService,
-    private _toasterService: TosterService
+    private _toasterService: TosterService,
+    private _router: Router,
   ) {
     this.initializeForm();
   }
@@ -36,6 +38,7 @@ export class SignupComponent implements OnInit {
         if (res.status) {
           this._toasterService.success(AppConfig.messages.success.register);
           // this.resetForm();
+          this._router.navigate(['auth/signin']);
         } else {
           this._toasterService.error(res.message);
         }
