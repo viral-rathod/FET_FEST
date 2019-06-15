@@ -3,5 +3,6 @@ export class ActiveUserModel {
         public _id?: string,
         public school_name?: string,
         public email?: string,
+        public isActive?: boolean
     ) { }
 }
